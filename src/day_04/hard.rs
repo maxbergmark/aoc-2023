@@ -19,11 +19,10 @@ fn calculate_card_copies(bingo_cards: Vec<BingoCard>) -> i32 {
 
     let mut copies = vec![1; n];
     for i in 0..n {
-        let score = scores[i];
         let n_copy = copies[i];
         copies.iter_mut()
             .skip(i+1)
-            .take(score as usize)
+            .take(scores[i] as usize)
             .for_each(|item| *item += n_copy);
     }
     copies.iter().sum()
