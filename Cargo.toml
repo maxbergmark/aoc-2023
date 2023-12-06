@@ -7,5 +7,6 @@ edition = "2021"
 
 [dependencies]
 no-panic = "0.1.27"
+rayon = "1.8.0"
 regex = "1.10.2"
 rstest = "0.18.2"
